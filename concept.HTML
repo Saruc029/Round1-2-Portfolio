@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คอนเซ็ปต์</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="concept-page">
+    <nav>
+        <div class="container">
+            <div class="nav-con">
+                <div class="logo">
+            <a href="#">
+                <img src="images/logo.png" alt="">
+            </a>
+        </div>
+                <ul class="menu">
+                    <li><a href="index.html">เกี่ยวกับฉัน</a></li>
+                    <li><a href="concept.html"class="active">คอนเซ็ปต์</a></li> 
+                    <li><a href="maincharacters.html">ตัวละครหลัก</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- คราสเลือด เริ่มเลอ -->
+    <div class="blood">
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+            
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+            
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+        <div class="colDrop"></div>
+
+        <div class="left-door"></div>
+        <div class="right-door"></div>
+        <div class="welcome">ようこそ</div>
+        <div class="welcomethai">ยินดีต้อนรับ</div>
+        <div class="content-box">
+        <p>เก</p>
+        </div>
+    </div>
+    <script>
+    const allDrops = document.querySelectorAll('.colDrop');
+    const totalDrops = allDrops.length;
+    allDrops.forEach((drop, index) => {
+        const position = (index / totalDrops) * 100; 
+        drop.style.left = position + '%';
+        const randomDelay = Math.random() * 2; 
+        drop.style.animationDelay = randomDelay + 's';
+    });
+    </script>
+<!-- คราสเลือดจบจ้า -->
+
+<!-- ฟู้ดเตอร์ -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Contact</h3>
+                <p>Email : dadywilaiporn955@gmail.com</p>
+                <p>Line ID : 0618712240</p>
+                <p>Phone : 0939692602</p>
+            </div>
+            <div class="footer-content">
+            <h3>行くぞ</h3>
+            <ul class="list">
+                <li><a href="maincharacters.HTML#natsu">明智光利（夏）</a></li>
+                <li><a href="maincharacters.HTML#toshio">俊夫</a></li>
+                <li><a href="maincharacters.HTML#tori">梟（鳥）</a></li>
+                <li><a href="maincharacters.HTML#hiharu">鳳凰（日春）</a></li>
+            </ul>
+            </div>
+         <div class="footer-content">
+            <h3>Follow me</h3>
+            <ul class="social-icon">
+            <li><a href="https://www.facebook.com/share/1FvF1fHe8E/"target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/sarup_juri?igsh=NDJ6NXJtZHI4b3By"target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+         </div>
+        </div>
+        <div class="bottom-bar">
+            <p>copyright&copy;2025 SGKProject</p>
+        </div>
+    </footer>
+</body>
+</html>
