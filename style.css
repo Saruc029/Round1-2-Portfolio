@@ -185,6 +185,14 @@ nav{
     cursor: pointer;
 }
 
+.self-container_row .fun_fact summary::-webkit-details-marker {
+    display: none;
+}
+
+.self-container_row .fun_fact summary:hover {
+    color: #fee135; 
+}
+
 .whyIT h4{
     font-family: 'Trirong', serif;
     font-size: 30px;
