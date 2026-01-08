@@ -37,11 +37,37 @@ nav{
     justify-content: space-between;
 }
 
-.logo img {
+.logo{
+    position: relative;
     height: 80px;  
     width: auto; 
     display: block;
     transform: translate(-50px, -5px); 
+}
+
+.logo .logo1 {
+    position: absolute;
+    height: 80px;  
+    width: auto; 
+    display: block;
+    transform: translate(-50px, -5px); 
+    z-index: 10;
+}
+.logo .logo2 {
+    position: absolute;
+    height: 80px;  
+    width: auto; 
+    display: block;
+    transform: translate(-50px, -5px); 
+    z-index: 5;
+}
+
+.logo .logo1:hover {
+    opacity: 0;
+}
+
+.logo .logo2:hover {
+    opacity: 1;
 }
 
 .menu{
@@ -207,14 +233,15 @@ nav{
     cursor: pointer;
 }
 
-.knowme p, 
+.self-container_row .me p,
+.self-container .knowme p, 
 .whyIT p, 
 .self-container_row .me p, 
 .self-container_row .fun_fact p {
     font-family: 'Trirong', serif;
     font-size: 20px;
     font-weight: 600;
-    color: #fff;
+    color: #ffffff;
     background: rgba(255, 255, 255, 0.15); 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -287,6 +314,7 @@ nav{
     object-fit: contain;
 }
 
+/* หน้าตัวละคร */
 .maincharacters-page{
     width: 100%;
     height: auto;
@@ -672,7 +700,7 @@ nav{
     animation: pain 12s linear infinite;
     z-index: 1;
     position: absolute;
-    margin-top: -380px;
+    margin-top: -480px;
     font-family: "Trirong";
     font-size: 100px;
     font-weight: 700;
