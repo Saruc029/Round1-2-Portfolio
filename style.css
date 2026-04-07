@@ -692,7 +692,7 @@ nav{
     animation: pain 12s linear infinite;
     z-index: 1;
     position: absolute;
-    top: 5px;
+    top: -0.26vw;
     font-family: "Zen Antique";
     font-size: 100px;
     font-weight: 700;
@@ -709,7 +709,7 @@ nav{
     animation: pain 12s linear infinite;
     z-index: 1;
     position: absolute;
-    margin-top: -480px;
+    margin-top: -60vh;
     font-family: "Trirong";
     font-size: 100px;
     font-weight: 700;
