@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=BBH+Bartle&family=Pridi:wght@200;300;400;500;600;700&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Antique&display=swap');
-
+/* เพื่อรีเซ็ตค่าทุกอย่างให้เริ่มจาก 0 ของบราวเซอร์ สูตรสำเร็จ */
 * {
     margin: 0;
     padding:0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* กันเนื้อหาล้นกล่องออกไปข้างนอก */
 }
-
+/* คราสของบาร์เมนูทุกหน้า */
 .container{
-    max-width: 100vw;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0 auto; /* บนล่างไม่เว้นเเต่ซ้ายขวาจัดเท่ากันอัตโนมัติ */
 }
 
 html, body {
@@ -17,8 +17,8 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; 
-    display: flex;
-    flex-direction: column;
+    display: flex; /* สั่งเรียงเเถวเเนวนอน */
+    flex-direction: column; /* เเนวดิ่ง */
 }
 
 html {
@@ -33,33 +33,28 @@ nav{
 }
 
 .nav-con{
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* เรียงหน้ากระดาน เเนวนอน */
+    justify-content: space-between; /* โลโก้ซ้าน เมนูขวา */
     align-items: center;
+}
+/* เเก้รวมตั้งค่าโลโก้ ตอนเเรกซ้ำกัน */
+.logo, .logo1, .logo2 {
+    height: 80px;  
+    width: auto; 
+    display: block;
+    transform: translate(-50px, -5px); /* ลอยตัวขึ้นเเละขยับได้ตามเราต้องการไม่กวนขนาดกล่องเพราะเเยกออกมาเเล้ว */
 }
 
 .logo{
     position: relative;
-    height: 80px;  
-    width: auto; 
-    display: block;
-    transform: translate(-50px, -5px); 
 }
 
 .logo .logo1 {
     position: absolute;
-    height: 80px;  
-    width: auto; 
-    display: block;
-    transform: translate(-50px, -5px); 
     z-index: 10;
 }
 .logo .logo2 {
     position: absolute;
-    height: 80px;  
-    width: auto; 
-    display: block;
-    transform: translate(-50px, -5px); 
     z-index: 5;
 }
 
@@ -73,42 +68,42 @@ nav{
 
 .menu{
     display: flex;
-    list-style: none;
+    list-style: none; /* เอาจุดหน้าเมนูออก */
 }
-
+/* รายการลิส */
 .menu li{
-    margin: 0 12px;
+    margin: 0 12px; /* ซ้ายขวาด้านนอกกล่องห่าง 12 */
 }
-
+/* รายการลิส ลิ้งค์ */
 .menu li a{
     font-family:"Trirong", serif;
     font-weight: 400;
     font-style: normal;
     color: #fff1d6;
-    text-decoration: none;
+    text-decoration: none; /* เอาเส้นข้างใต้ออก */
 }
-
+/* a ตัวกดลิ้งค์ */
 .menu a {
-    text-decoration: none;
     color:#fff1d6 ;
+    text-decoration: none;
     padding: 10px 15px;
     display: block;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* ใช้เวลาเปลี่ยนร่าง 0.3 วิ */
 }
-
+/* active หน้าปัจจุบัน */
 .menu a.active{
     background-color:#2dbae1;
-    border-bottom: 3px solid #fff1d6;
+    border-bottom: 3px solid #fff1d6; /* ทำให้หน้าที่เราเลือกปัจจุบันมีเส้นหนาๆข้างใต้บอกทับสีฟ้า */
     color: #fff1d6;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 5px; /* ทำมุมโค้งๆ ให้กลมๆ ลบเหลี่ยม */
 }
 
 .aboutme-page {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(images/blue.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(images/blue.jpg); /* ทำให้รูปส่างขึ้นด้วยสีขาวจางๆ */
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -120,223 +115,10 @@ nav{
     min-height: auto; 
     width: 100%;  
     max-width: 100%; 
-    margin: 0 auto 40px auto; 
+    margin: 0 auto 40px auto; /* ล่างห่าง 40 */
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.knowme, .whyIT {
-    width: 100%;  
-    max-width: 800px;
-    padding: 20px; 
-     margin: 0 auto; 
-    text-align: center;
-    margin: 0 auto;    
-}
-
-.knowme h2, .whyIT h3 {
-    margin-bottom: 20px;
-    font-size: 32px;
-}
-
-.knowme p, .whyIT p {
-    text-align: center;
-    line-height: 1.6;
-    word-wrap: break-word;
-
-}
-
-.self-container_row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; 
-    align-items: center;
-    gap: 20px;
-    width: 100vw; 
-    max-width: 100vw;
-    margin: 0; 
-    padding: 60px 20px; ; 
-    box-sizing: border-box;
-}
-
-.self-container_row .fun_fact, 
-.self-container_row .me {
-    max-width: 800px;
-    flex: 1;
-}
-
-.self-container_row .me {
-    flex: 2;
-    width: 80%;
-    max-width: none; 
-    text-align: left;
-}
-
-.self-container_row .profile-img {
-    width: 100%;
-    max-width: 400px;
-    min-width: 200px;
-    flex: 0 0 400px; 
-    height: 400px; 
-    border-radius: 50%;
-    overflow: hidden;
-    border-radius: 15px;
-}
-
-.self-container_row .monkey-gif {
-    flex: 1;
-    width: 80%;
-    max-width: 300px;
-    height: auto; 
-    flex: 0 0 auto;
-    display: block;
-    object-fit: contain;
-}
-
-.knowme h2, 
-.whyIT h3, 
-.self-container_row .me h1, 
-.self-container_row .fun_fact summary {
-    font-family: 'Trirong', serif;
-    font-size: 45px;
-    font-weight: 900;
-    color: #fff; 
-    text-align: center;
-    margin-bottom: 25px;
-    -webkit-text-stroke: 2px #da70d6; 
-    text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 
-                 0 0 10px rgba(218, 112, 214, 0.5);
-    list-style: none;
-    @import url('https://fonts.googleapis.com/css2?family=Anton&family=BBH+Bartle&family=Pridi:wght@200;300;400;500;600;700&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Antique&display=swap');
-
-* {
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-}
-
-.container{
-    max-width: 100vw;
-    margin: 0 auto;
-}
-
-html, body {
-    width: 100%;
-    min-height: 100vh; 
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; 
-    display: flex;
-    flex-direction: column;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-nav{
-    padding: 16px;
-    background-color:#02134b ;
-    position: relative;
-    z-index: 9999;
-}
-
-.nav-con{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo{
-    position: relative;
-    height: 80px;  
-    width: auto; 
-    display: block;
-    transform: translate(-50px, -5px); 
-}
-
-.logo .logo1 {
-    position: absolute;
-    height: 80px;  
-    width: auto; 
-    display: block;
-    transform: translate(-50px, -5px); 
-    z-index: 10;
-}
-.logo .logo2 {
-    position: absolute;
-    height: 80px;  
-    width: auto; 
-    display: block;
-    transform: translate(-50px, -5px); 
-    z-index: 5;
-}
-
-.logo .logo1:hover {
-    opacity: 0;
-}
-
-.logo .logo2:hover {
-    opacity: 1;
-}
-
-.menu{
-    display: flex;
-    list-style: none;
-}
-
-.menu li{
-    margin: 0 12px;
-}
-
-.menu li a{
-    font-family:"Trirong", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #fff1d6;
-    text-decoration: none;
-}
-
-.menu a {
-    text-decoration: none;
-    color:#fff1d6 ;
-    padding: 10px 15px;
-    display: block;
-    transition: all 0.3s ease;
-}
-
-.menu a.active{
-    background-color:#2dbae1;
-    border-bottom: 3px solid #fff1d6;
-    color: #fff1d6;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-.aboutme-page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(images/blue.jpg);
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.self-container {
-    min-height: auto; 
-    width: 100%;  
-    max-width: 100%; 
-    margin: 0 auto 40px auto; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
     gap: 40px;
 }
 
