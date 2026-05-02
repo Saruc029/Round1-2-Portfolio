@@ -29,7 +29,7 @@ nav{
     padding: 16px;
     background-color:#02134b ;
     position: relative;
-    z-index: 9999;
+    z-index: 9999; /* เลขยิ่งเยอะยิ่งอยู่บน */
 }
 
 .nav-con{
@@ -126,7 +126,7 @@ nav{
     width: 100%;  
     max-width: 800px;
     padding: 20px; 
-    margin: 0 auto; 
+    margin: 0 auto; /* จัดให้หลางตลอด ซ้ายขวาเท่ากัน */
     text-align: center;
     margin: 0 auto;    
 }
