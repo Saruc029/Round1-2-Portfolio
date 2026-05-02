@@ -761,7 +761,7 @@ p{
     font-family:'Anton','Zen Antique','sans-serit';
     font-size: 20px;
     font-weight: 200;
-    color:#2dbae1;
+    color:#000000;
 }
 
 .footer-content p{
@@ -835,6 +835,7 @@ a:hover{
 
 .bottom-bar p{
     background-color: #000000;
+    color: #cccccc;
     text-align: center;
     margin: 0;
     width: 100%;
