@@ -385,6 +385,7 @@ nav{
     width: 100%;
     height: 100%;
     object-fit: cover; 
+    cursor: pointer;
 }
 
 .bottom-img {
@@ -447,13 +448,24 @@ nav{
          2px -2px 0 #fff,
         -2px  2px 0 #fff,
          2px  2px 0 #fff,
-         0px  0px 5px rgba(255,255,255,0.8);
+         3px  3px 3px rgba(0, 0, 0, 1);
     color :#da70d6;
 }
 
 .back_toshio{
     width: 100%;
     height: 100%;
+}
+
+.text-kofuku {
+    font-weight: bold; 
+    text-shadow: 
+        -2px -2px 0 #fff,  
+         2px -2px 0 #fff,
+        -2px  2px 0 #fff,
+         2px  2px 0 #fff,
+         3px  3px 3px rgba(0, 0, 0, 1);
+    color :#149912;
 }
 
 .pic-toshio, .pic-tori, .pic-hiharu {
@@ -500,6 +512,50 @@ nav{
     height: 100%;
 }
 
+.text-tori {
+    font-weight: bold; 
+    text-shadow:
+        -2px -2px 0 #fff,
+         2px -2px 0 #fff,
+        -2px  2px 0 #ffffff,
+         2px  2px 0 #fff,
+         3px  3px 3px rgba(0, 0, 0, 1);
+    position: relative;
+    width: 100%;
+    height: 4vh;
+    cursor: pointer;
+}
+
+.text-saki {
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+    color :#FF7E00;
+}
+
+.text-fukuro {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    text-shadow:
+    -1px -1px 5px #ffffff,
+    1px 1px 0 #ffffff,
+    -1px -1px 0 #000000,
+    1px 1px 0 #ffffff,
+     0px  0px 5px rgba(0, 0, 0, 1);
+    color: #1C3563
+}
+
+.text-tori:hover .text-fukuro {
+   opacity: 1;
+   transition: opacity 0.3s ease;
+}
+
+.text-tori:hover .text-saki{
+   opacity: 0;
+   transition: opacity 0.3s ease;
+}
+
 .all_lore_of_tori {
     max-width: 600px;
     z-index: 100;
@@ -530,6 +586,50 @@ nav{
 .back_hiharu {
     width: 100%;
     height: 100%;
+}
+
+.text-hiharu {
+    font-weight: bold; 
+    text-shadow:
+        -2px -2px 0 #fff,
+         2px -2px 0 #fff,
+        -2px  2px 0 #ffffff,
+         2px  2px 0 #fff,
+         3px  3px 3px rgba(0, 0, 0, 1);
+    position: relative;
+    width: 100%;
+    height: 4vh;
+    cursor: pointer;
+}
+
+.text-haru {
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+    color :#ca0000;
+}
+
+.text-hoo {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    text-shadow:
+    -1px -1px 5px #ffffff,
+    1px 1px 0 #ffffff,
+    -1px -1px 0 #ffffff,
+    1px 1px 0 #ffffff,
+     0px  0px 5px rgba(0, 0, 0, 1);
+    color: #1C3563
+}
+
+.text-hiharu:hover .text-hoo {
+   opacity: 1;
+   transition: opacity 0.3s ease;
+}
+
+.text-hiharu:hover .text-haru {
+   opacity: 0;
+   transition: opacity 0.3s ease;
 }
 
 .all_lore_of_hiharu {
@@ -752,19 +852,16 @@ footer{
     font-family:'Anton','Zen Antique','sans-serit';
     font-size: 30px;
     color: #2dbae1;
-
     margin-bottom: 15px;
     text-align: center;
 }
 
-p{
+.footer-content p{
     font-family:'Anton','Zen Antique','sans-serit';
     font-size: 20px;
     font-weight: 200;
     color:#000000;
-}
-
-.footer-content p{
+    text-shadow: 2px 2px 3px #ffffff;
     width: 190px;  
     margin: auto;
     padding: 7px;
@@ -785,7 +882,8 @@ p{
     width: auto;
     text-align: center;
     list-style-type: none;
-    padding: 7px;
+    padding: 0.35vw;
+    margin: 0.5vh;
     position: relative;
 }
 
@@ -834,11 +932,13 @@ a:hover{
 }
 
 .bottom-bar p{
+    font-family:'Anton','Zen Antique','sans-serit';
+    font-size: 16px;
+    font-weight: 200;
     background-color: #000000;
-    color: #cccccc;
+    color: #ffffff;
     text-align: center;
     margin: 0;
     width: 100%;
-    font-size: 16px;
     padding: 10px 0;
 }
